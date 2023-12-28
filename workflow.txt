@@ -17,3 +17,7 @@ Git and github needs to be connected in order to host your local git project on 
 3. Add new remote in your local git system and connect it using link copied.
 4. Modify branch name from master to main.
 5. Push your changes from git to github and you are done.
+
+
+=============== Init steps ================
+1. git init => To initiate git to your project's root directory.
