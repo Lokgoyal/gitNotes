@@ -6,3 +6,18 @@ Github: It is a cloud platform that hosts the file tracked by git on your local 
 2. Add or modify files inside your project.
 3. Add modified or new files to your git staging area.
 4. Commit the files to git for snapshot, once they get finallized.
+
+
+================== Remote Workflow===========================
+Remote : Consider remote as the short name for remote repositories hosted on github inside your account. 
+To connect git to github, we basically need remote repo url or link, so that we can tell git that it is our current project root on hosted platform.
+
+
+============ Remote commands ================
+Add
+1. git remote add <repo nickname> <remote repo link> => To connect remote repo to our git, we assign the remote repo a nickname (origin as standard name but not necessary) and then we define the remote repo link to get it connected.
+2. git remote rename <old nickname> <new nickname> => To rename current remote repo nickname to a new nickname.
+3. git remote -v => To verify whether the remote you added does exist or not.
+
+Remove
+1. git remote remove <nickname of current remote> => To remove the current remote from your git system or to unlink your git from github repo.
