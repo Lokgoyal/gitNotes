@@ -17,3 +17,35 @@ Git and github needs to be connected in order to host your local git project on 
 3. Add new remote in your local git system and connect it using link copied.
 4. Modify branch name from master to main.
 5. Push your changes from git to github and you are done.
+
+
+
+================= Stash Workflow =========================
+Stashing => The process of saving the unsaved work somewhere for temporary time period is known as stashing.
+It might happen that you are working in a branch and you introduced some changes, but they are not yet ready to be committed. Now, you want to move to some other branch for some other modifications, but you can't leave your unsaved changes.
+This is when the stashing comes into play, where you save your unsaved changes for temporary use and are ready to move further without fearing of loosing unsaved changes.
+
+
+=================== Steps to stash ======================
+Add
+1. git stash or git stash push => It will save your unsaved work into temporary stack provided by git. Unsaved work includes everything from staged to unstaged changes.
+2. git stash save "<message>" => If multiple unsaved work is saved into stack, it makes the task of identifying a particular work difficult. So we can save our unsaved work with proper message which can be used later to identify it.
+
+List
+1. git stash list => It will list down all your unsaved work from all your branches.
+
+Re-use
+1. git stash pop => It will fetch recently saved work from stack and then pop it from stack to use or re-apply the same work here.
+2. git stash apply => It will fetch recently saved work from stack, but it won't pop it off from the stack, making it re-usable again in all different branches for later use.
+
+Delete
+1. git stash drop stash@{ <number> } => To delete specific stashed work from the stack.
+2. git stash clear => To delete all the stashed work and make the stack clear.
+
+
+Target specific stash : stash@{ stash number } : You don't want to always re-use the most recently saved work, instead prefer to use the work you saved preeviously. So stash stack arrange your work in stack and assign each work a number. So specify stash no.
+to target specific stashed work. You just need to append this stash@{ number } at end of respective command like git stash apply stash@{4}.
+
+Note : 
+Also, if you saved an unsaved work from index.html and you want to apply the unsaved work to some other file named index2.html, then it won't happen. 
+As you can only re-apply the unsaved work to the file with the same name, Because git tracks file changes and will re-apply the changes to the file from which they were saved from.
