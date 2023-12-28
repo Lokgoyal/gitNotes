@@ -1,0 +1,8 @@
+Git : It is a tool that exists on our computer system to track changes made into our respective project overtime.
+Github: It is a cloud platform that hosts the file tracked by git on your local system with their associated changes overtime.
+
+============Basic workflow of using a git system=================>
+1. Init git at root directory of your project.
+2. Add or modify files inside your project.
+3. Add modified or new files to your git staging area.
+4. Commit the files to git for snapshot, once they get finallized.
