@@ -17,3 +17,39 @@ Git and github needs to be connected in order to host your local git project on 
 3. Add new remote in your local git system and connect it using link copied.
 4. Modify branch name from master to main.
 5. Push your changes from git to github and you are done.
+
+
+
+================Merge Branch Procedure===========================
+When two branches are separated to achieve a particular puropse, it is called branching. But after achieving the specific goals, the branch can be merged at any point based on the need or decision of administrator.
+Mergin of branches can be done in two ways : 1) Create pull request from github.    2) By merging them through command line.
+
+Pull Request => It is a github mechanism that requires the base branch and merging branch name. So, that it creates a request that will merge the merging branch into base branch. It basically is a kind of request forum where you can request
+the base branch admin to pull your branch and merge it into base branch, along with optional description.
+
+Merge conflicts => It is the event that arises when github is not able to resolve the conflicts automatically between two branches. It basically happens because, a single file which exists in both branches contains two differnt codes on same
+line number making git confused about which code to keep or which one to discard. We can solve it in 4 different ways:
+
+============= 4 Ways ===============
+1. Accept incoming change => Meaning the compare branch code will be given priority and the base branch code will be discarded.
+2. Accept current change => Meaning the base branch code will be given priority and the compare branch code will be discarded.
+3. Accept both => Will basically keep both files changes by appending compare branch code to base branch code at later lines.
+4. Decide manually => This will basically opens the smart editor where you can manually type or edit the changes you want.
+
+
+
+================= Steps to create Pull request (PR) ========================
+1. Click on create pull request on github.
+2. Select Base branch and compare branch dropdowns. (Remember that comparing branch will be merged into base branch).
+3. Descibe about the reason (Optional).
+4. Click on create pull request.
+5. Github will compare the two branches and look for conflicts exists between both branches. If found none, it will give you green signal, otherwise will tell you and will suggest you to resolve conflicts.
+6. Once conflicts are resolved, this request will either be accepted or rejected by base branch leader, after which this request will be closed or will be moved to pending based on decision taken.
+
+
+====================== Steps to merge through command line =========================
+1. git diff <branch name / filename / data source> => This will helps you tell the difference between two data sources, it can be either two files or two branches etc. It will also tell you the conflicts ahead of time before merging request.
+2. git merge <branch name> => The current working branch will be base branch and branch specified here will be considered as compare branch. It will compare and try to merge the two branches.
+
+
+Note : Merging two branches will update your codebase, so it will be committed as well with a default merging message. Meaning it will take snapshot of current state of code.
