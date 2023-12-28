@@ -6,3 +6,14 @@ Github: It is a cloud platform that hosts the file tracked by git on your local 
 2. Add or modify files inside your project.
 3. Add modified or new files to your git staging area.
 4. Commit the files to git for snapshot, once they get finallized.
+
+
+
+================Connect git to github workflow=====================
+Git and github needs to be connected in order to host your local git project on cloud, so that you can manage your files from anywhere in the world.
+
+1. Create a github repository in your github profile.
+2. Github will then show you a link of your newly created repository, copy it for later step.
+3. Add new remote in your local git system and connect it using link copied.
+4. Modify branch name from master to main.
+5. Push your changes from git to github and you are done.
