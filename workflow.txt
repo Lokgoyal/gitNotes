@@ -17,3 +17,18 @@ Git and github needs to be connected in order to host your local git project on 
 3. Add new remote in your local git system and connect it using link copied.
 4. Modify branch name from master to main.
 5. Push your changes from git to github and you are done.
+
+
+
+================ Steps to Reset ====================
+Reset : Meaning that we want to undo some changes that we accidentally did.
+
+
+Unstage
+1. git reset <filename> => To move the file from staged to unstaged area.
+2. git reset => To move all the files from staged area to unstaged.
+
+Roll back to specific Commit
+1. git reset HEAD~1 => To rollback our local commit by 1 step.
+2. git reset <commit hash> => It will rollback to specific commit but will keep the changes that are made after this commit into vs code. Meaning local git will remove those changes as they were never done, but vscode will keep the changes as unsaved.
+3. git reset --hard <commit hash> => It will rollback to specific commit and will delete all the changes that were made after it. Meaning neither git nor vscode will keep the changes.
