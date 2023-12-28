@@ -21,3 +21,12 @@ Add
 
 Remove
 1. git remote remove <nickname of current remote> => To remove the current remote from your git system or to unlink your git from github repo.
+
+
+Push or Pull from remote:
+1. git clone <repo url> => This will clone the remote repo to your local system.
+2. git push <remote repo nickname> <branch name inside remote repo> => This will push your local changes git changes to github remote repo under specified branch.
+3. git push -u <remote repo nickname> <branch name inside remote repo> => To skip specifying remote repo and branch name everytime, we tells the git to set upstream (-u), meaning the changes commited after this command will be reflected under
+repo name and branch name specified in the command. Helpful, when you are working on same repo and same branch for long time. After that, you don't need to specify repo and branch, just simply execute git push to push the changes remotely.
+
+4. git pull <repo name> <branch name> => To sync your local repo with github repo. Meaning remote repo particular branch will be copied to local system.
