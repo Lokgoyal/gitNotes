@@ -17,3 +17,28 @@ Git and github needs to be connected in order to host your local git project on 
 3. Add new remote in your local git system and connect it using link copied.
 4. Modify branch name from master to main.
 5. Push your changes from git to github and you are done.
+
+
+============ Branches in your git or github ==============================
+When we want to work separately without disturbing the flow of main branch, we basically create a different branch, which is nothing but a duplicate copy of main branch. Two branches can hold different code based on their needs.
+
+Add
+1. git branch <new branch name> => It will create a new local branch in your git system. To make it visible on github, just push the changes of this branch remotely to github under the same branch name.
+2. git checkout -b <new branch name> => It will also create a new branch, but with the only difference that, it will exit the current branch and switch your current working branch to new branch you created. Handy, when you want to save time.
+
+List
+1. git branch or git branch -l => This will list down all the branches exists in your git system and will also highlight the present working branch.
+
+Update
+1. git branch -m <new name for current branch> => This will rename the current branch name to the new name that you specify here.
+
+Delete
+1. git branch -d <branch name> => This will delete the branch you want to delete locally.
+2. git push <remote repo name> --delete <branch name> => This will remotely delete the branch from your github.
+
+Move
+1. git checkout <other branch name> => checkout is used to exit the current branch, also it requires the other branch name to which it should make you move to.
+
+
+Note: Changing your branch name locally won't change the branch name in github. Instead you have to push your local branch with new name remotely to create a new branch with all the previous commits, also you have to delete the branch
+that exists with old name remotely by executing delete branch command for remote.
